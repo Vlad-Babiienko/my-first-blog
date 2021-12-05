@@ -2,8 +2,10 @@
 <html>
 <head> <title> Django Blog</title></head>
 <body>
+
 {% block content %}
     <div class="post">
+
         {% if post.published_date %}
             <div class="date">
                 {{ post.published_date }}
@@ -15,6 +17,12 @@
         <h1>{{ post.title }}</h1>
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
+    <audio controls>
+            <source src="cool.ogg" type="audio/ogg; codecs=vorbis">
+            <source src="cool.mp3" type="audio/mpeg">
+            Тег audio не поддерживается вашим браузером.
+            <a href="cool.mp3">Скачайте музыку</a>.
+        </audio>
 {% endblock %}
 </body>
 </head>
